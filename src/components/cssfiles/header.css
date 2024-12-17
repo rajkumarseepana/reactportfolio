@@ -1,0 +1,175 @@
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: var(--header-background, #FFFFFF); /* Set to a variable for flexibility */
+    color: black;
+    width: 100%;
+    padding: 8px 16px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hide and Show Header on Scroll */
+  .header.hidden {
+    transform: translateY(-200px);
+  }
+  
+  .header.visible {
+    transform: translateY(0);
+  }
+  
+  /* Container for Logo and Navigation */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* Logo */
+  .logo-link {
+    flex: 1;
+  }
+  
+  .logo {
+    width: 60px;
+    height: auto;
+    transform: scale(2);
+    transform-origin: center;
+    margin-left: 100px;
+  }
+  
+  /* Desktop Navigation */
+  .desktop-nav {
+    display: flex;
+  }
+  
+  .desktop-nav a {
+    text-decoration: none;
+    color: var(--link-color, black); /* Use a variable to control link color dynamically */
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .desktop-nav a:hover {
+    color: gray;
+  }
+  
+  /* Theme Toggle */
+  .theme-toggle {
+    margin-left: 10px;
+    margin-right: 70px;
+  }
+  
+  /* Hamburger Menu (Mobile) */
+  .hamburger-menu {
+    display: none;
+  }
+  
+  .mobile-menu {
+    position: absolute;
+    top: 40px; /* Adjust based on the size of your hamburger button */
+    right: 0;
+    background-color: var(--mobile-menu-bg, #FFFFFF); /* Use a CSS variable for background */
+    color: var(--mobile-menu-color, black); /* Set color for text */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  
+  /* Mobile Menu Links */
+  .mobile-menu a {
+    text-decoration: none;
+    color: var(--mobile-menu-color, black); /* Use the same color variable */
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  
+  .mobile-menu a:hover {
+    color: gray;
+  }
+  
+  /* Prevent Header Overlap with Content on Scroll */
+  .landing-section {
+    margin-top: 50px;
+    /* Ensure content starts below the header */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+  
+    /* Hide Desktop Navigation on Mobile */
+    .desktop-nav {
+      display: none;
+    }
+  
+    /* Hamburger Menu on Mobile */
+    .hamburger-menu {
+      display: inline-flex;
+      margin-right: 8px;
+    }
+  
+    /* Logo Styling on Mobile */
+    .logo {
+      width: 60px;
+      height: auto;
+      transform: scale(1.5);
+      transform-origin: center;
+      margin-left: 30px;
+    }
+  
+    /* Positioning Logo on the Left */
+    .logo-link {    
+      position: absolute;
+      left: 16px;
+    }
+  
+    /* Theme Toggle on the Right */
+    .theme-toggle {
+      position: absolute;
+      right: -60px;
+    }
+  
+/* Mobile Menu Styling */
+.mobile-menu {
+  position: absolute;
+  top: 60px; /* Adjust based on the size of your hamburger button */
+  right: 16px; /* Align right with a gap */
+  left: auto; /* Remove left property */
+  background-color: var(--mobile-menu-bg, #FFFFFF); /* Use a CSS variable for background */
+  color: var(--mobile-menu-color, black); /* Set color for text */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px 0; /* Reduced vertical padding for less space */
+  width: 160px; /* Set a width to keep the dropdown consistent */
+  align-items: flex-start; /* Align items to the left */
+  display: flex;
+  flex-direction: column;
+}
+.mobile-menu {
+  top: 60px; /* Adjust based on the size of your hamburger button */
+  right: 16px; /* Align right with a gap */
+
+  padding: 4px;
+  width: 100px; /* Set a width to keep the dropdown consistent */
+}
+.mobile-menu a {
+  border-bottom: 1px solid #ddd; /* Add a border between links */
+  width: 100%;
+}
+
+/* Remove border on the last link */
+.mobile-menu a:last-child {
+  border-bottom: none;
+  margin-top: -7px;
+}
+}
+  

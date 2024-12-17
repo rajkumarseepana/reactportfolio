@@ -1,0 +1,90 @@
+/* Fixed background for the entire page */
+.certificates-container {
+    background-color: #2a4365; /* Fixed background color */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; /* Default for large screens */
+  }
+  
+  /* Left Section Animations */
+  .left-panel {
+    transform: translateX(-50px);
+    transition: all 0.8s ease-in-out;
+    margin-right: 150px;
+    margin-left: 300px;
+    width: 500px;
+    border: 2px solid #2c5282; /* Set your desired border color */
+  }
+  
+  /* When the panel slides in */
+  .left-panel.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Certificate Item */
+  .certificate-item {
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Certificate Item Hover Effect */
+  .certificate-item:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Right Section */
+  .right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    visibility: hidden; /* Hide content initially */
+  }
+  
+  .right-panel.show {
+    visibility: visible; /* Display content when selected */
+    margin-right: 200px;
+  }
+  
+  .right-panel img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .certificates-container {
+      flex-direction: column; /* Stack sections vertically */
+      justify-content: flex-start; /* Align items at the top */
+      height: auto; /* Remove full height on small screens */
+    }
+  
+    /* Left Panel Styles */
+    .left-panel {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 70px;
+      margin-bottom: -40px;
+      width: 80%; /* Adjust width for small screens */
+      padding: 16px;
+      text-align: left; 
+    }
+  
+    /* Right Panel Styles */
+    .right-panel {
+      display: none; /* Hide the right panel on mobile */
+    }
+  
+    /* Hide View button and right panel on small screens */
+    .certificate-item .view-button {
+      display: none; /* Hide View button */
+    }
+  }
+  

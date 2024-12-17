@@ -1,0 +1,110 @@
+/* General Wrapper */
+.contact-us-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  transition: background-color 0.3s ease;
+  border: 2px solid black; /* Change to desired color */
+}
+.contact-us-wrapper.light input,
+.contact-us-wrapper.light textarea {
+  border-color: black; /* Light theme input border */
+}
+.contact-us-wrapper.light .chakra-select {
+  border-color: black; /* Light theme border color */
+}
+
+.contact-us-wrapper.light {
+  background-color: #edf2f7;
+  color: black;
+}
+
+.contact-us-wrapper.dark {
+  background-color: #2a4365;
+  color: white;
+}
+
+/* Left Section */
+.contact-us-left {
+  width: 40%;
+}
+
+.contact-us-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-us-left p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+.contact-us-right.scroll{
+  border: 2px solid white; /* Change to desired color */
+
+}
+/* Right Section */
+.contact-us-right {
+  width: 50%;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable scrolling if content exceeds */
+  max-height: 540px; /* Limit the height of the form */
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid skyblue; /* Change to desired color */
+
+}
+
+.contact-us-right.light {
+  background-color: #ffffff;
+}
+
+.contact-us-right.dark {
+  background-color: #1a496c;
+}
+
+.contact-us-right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Scroll Hover Effect */
+.contact-us-right.scroll-hover:hover,
+.contact-us-right.scroll-hover:active {
+  transform: translateY(-5px); /* Slight upward movement on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  border: 2px solid black; /* Change to desired color */
+
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .contact-us-wrapper {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-us-left,
+  .contact-us-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-us-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-us-right h2 {
+    font-size: 1.2rem;
+  }
+}
