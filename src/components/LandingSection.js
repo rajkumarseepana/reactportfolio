@@ -59,7 +59,7 @@ const LandingSection = () => (
         <Avatar
           src={rajAvatar}
           className="avatar"
-          style={{ width: "240px", height: "240px"}}
+          style={{ width: "300px", height: "300px"}}
         />
       </div>
     </div>
