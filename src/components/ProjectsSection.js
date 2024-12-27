@@ -11,7 +11,7 @@ const projects = [
       "Built with HTML, CSS and JavaScript, featuring a responsive layout. 🌐💻",
     gitLink: "https://github.com/rajkumarseepana/resume-project",
     liveLink: "https://rajkumarseepana.github.io/resume-project/",
-    getImageSrc: () => require("../images/photo1.png"),
+    getImageSrc: () => require("../images/resume.png"),
   },
   {
     title: "Weather Detector Web Application",
@@ -19,7 +19,7 @@ const projects = [
       "Developed a web app that fetches and displays real-time weather data based on user input. 🌤️🌍",
     gitLink: "https://github.com/rajkumarseepana/WeatherDetector",
     liveLink: "https://rajkumarseepana.github.io/WeatherDetector/",
-    getImageSrc: () => require("../images/photo2.png"),
+    getImageSrc: () => require("../images/weather.png"),
   },
   {
     title: "React Calculator",
@@ -29,7 +29,17 @@ const projects = [
       result updates and input reset functionality. ➗🧮`,
     gitLink: "https://github.com/rajkumarseepana/react-calculator",
     liveLink: "https://rajkumarseepana.github.io/react-calculator/",
-    getImageSrc: () => require("../images/photo3.png"),
+    getImageSrc: () => require("../images/calculator.png"),
+  },
+  {
+    title: "Food Delivery App",
+    description:
+      `A 🍔 streamlined food delivery app with intuitive UI/UX 
+      and seamless backend integration. 🚀 Designed for a 
+      smooth ordering experience and optimal performance.`,
+    gitLink: "https://github.com/rajkumarseepana",
+    liveLink: "https://foodguru.vercel.app/",
+    getImageSrc: () => require("../images/tomato.png"),
   },
 ];
 
