@@ -5,7 +5,7 @@
   align-items: center;
   background-color: #2a4365;
   color: white;
-  min-height: 100vh;  /* Full screen height */
+  min-height: 100vh; /* Full screen height */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -15,8 +15,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;  /* Ensures wrapping on smaller screens */
-  max-width: 1000px;  /* Maximum width for larger screens */
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+  max-width: 1000px; /* Maximum width for larger screens */
   width: 100%;
   gap: 40px;
   padding: 20px;
@@ -24,15 +24,15 @@
 
 /* Left Section */
 .content-left {
-  flex: 1;  /* Takes up more space on larger screens */
-  min-width: 300px;  /* Prevents shrinking too small */
+  flex: 1; /* Takes up more space on larger screens */
+  min-width: 300px; /* Prevents shrinking too small */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .content-left .greeting {
-  font-size: 2.5rem;  /* Adjust font size */
+  font-size: 2.5rem; /* Adjust font size */
   font-weight: bold;
 }
 
@@ -63,7 +63,6 @@
   display: flex;
   gap: 17px;
   font-size: 1.2rem;
-
 }
 
 .social-link {
@@ -76,26 +75,40 @@
   transform: scale(1.3);
 }
 
-
 /* Right Section */
 .content-right {
   flex: 0.5;
-  min-width: 200px;  /* Prevents shrinking too small */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.avatar {
-  border-radius: 50%;
+.content-right .avatar {
+  width: 300px; /* Adjusted size for better visibility */
+  height: 300px; /* Keep proportions consistent */
+  object-fit: cover;
+  border-radius: 50%; /* Keeps the circular shape */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Jump Animation for Avatar */
+.animated-avatar {
+  animation: jump 1s ease-in-out 7; /* Jump animation twice */
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0); /* Default position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move up */
+  }
+}
 
 /* Responsive Design for Mobile Tablets */
 @media (max-width: 768px) {
   .content-container {
-    flex-direction: column;    /* Stack content vertically */
+    flex-direction: column; /* Stack content vertically */
     text-align: center;
   }
 
@@ -105,15 +118,13 @@
   }
 
   .content-left .social-icons {
-    gap: 20px;    /* Smaller gap on smaller screens */
-    font-size: 0.8rem;    /* Adjust the size of the icons */
-
+    gap: 20px; /* Smaller gap on smaller screens */
+    font-size: 0.8rem; /* Adjust the size of the icons */
   }
 
   .content-left .greeting {
     font-size: 1.2rem;
     margin-bottom: -11px;
-
   }
 
   .content-left .typewriter {
@@ -122,23 +133,16 @@
 
   .content-left .resume-button {
     font-size: 0.7rem; /* Smaller font size on tablet */
-    padding: 3px 6px;     /* Further reduced padding */
-    height: auto;    /* Adjusts the height based on content */
+    padding: 3px 6px; /* Further reduced padding */
+    height: auto; /* Adjusts the height based on content */
     margin-top: -20px;
-
-  }
-
-  .avatar {
-    width: 160px;    /* Avatar resized for smaller screens */
-    height: 160px;
   }
 }
 
 /* Responsive Design for Smaller Mobile Screens */
 @media (max-width: 480px) {
-
-  .avatar {
-    width: 130px;    /* Smaller avatar for small mobile screens */
-    height: 130px;
+  .content-right .avatar {
+    width: 200px; /* Smaller size for mobile screens */
+    height: 200px;
   }
 }
