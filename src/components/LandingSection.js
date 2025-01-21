@@ -48,7 +48,7 @@ const LandingSection = () => (
               delaySpeed={1000}
             />
           </Heading>
-          <Button as="a" href="/resume.pdf" download="Raj_Resume.pdf" className="resume-button">
+          <Button as="a" href="/rajkumarseepana.pdf" download="Raj_Resume.pdf" className="resume-button">
             Download Resume
           </Button>
         </VStack>
