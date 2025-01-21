@@ -3,17 +3,15 @@ import { Box, Flex, Text, Button, Image, useColorModeValue } from "@chakra-ui/re
 import "./cssfiles/certificates.css";
 
 // Import images at the top
-import fdImage from "../images/fdintro.png";
-import react from "../images/reactadvance.png";
+import fdImage from "../images/fd.png";
 import python from "../images/python.png";
 import tcs from "../images/tcs.png";
 
 
 const certificatesData = [
-  { id: 1, title: "Frontend Development", image: fdImage },
-  { id: 2, title: "React", image: react },
-  { id: 3, title: "Python Programming", image: python },
-  { id: 4, title: "TCS iON Career Edge", image: tcs },
+  { id: 1, title: "Frontend Developer", image: fdImage },
+  { id: 2, title: "Python Programming", image: python },
+  { id: 3, title: "TCS iON Career Edge", image: tcs },
 ];
 
 const Certificates = () => {
