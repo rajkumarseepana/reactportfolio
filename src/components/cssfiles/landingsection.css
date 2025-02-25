@@ -84,16 +84,15 @@
 }
 
 .content-right .avatar {
-  width: 300px; /* Adjusted size for better visibility */
-  height: 300px; /* Keep proportions consistent */
+  width: 300px; 
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%; /* Keeps the circular shape */
+  border-radius: 50%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Jump Animation for Avatar */
 .animated-avatar {
-  animation: jump 1s ease-in-out 7; /* Jump animation twice */
+  animation: jump 1s ease-in-out 7; 
 }
 
 @keyframes jump {
@@ -132,9 +131,9 @@
   }
 
   .content-left .resume-button {
-    font-size: 0.7rem; /* Smaller font size on tablet */
-    padding: 3px 6px; /* Further reduced padding */
-    height: auto; /* Adjusts the height based on content */
+    font-size: 0.7rem; 
+    padding: 3px 6px; 
+    height: auto; 
     margin-top: -20px;
   }
 }
@@ -142,7 +141,7 @@
 /* Responsive Design for Smaller Mobile Screens */
 @media (max-width: 480px) {
   .content-right .avatar {
-    width: 200px; /* Smaller size for mobile screens */
+    width: 200px; 
     height: 200px;
   }
 }

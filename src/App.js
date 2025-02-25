@@ -5,7 +5,7 @@ import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
-import Certificates from "./components/certificates"; // Import Certificates Component
+import Certificates from "./components/certificates"; 
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 
@@ -18,7 +18,7 @@ function App() {
     <ChakraProvider>
       <AlertProvider>
         <Box
-          backgroundColor={backgroundColor} // Dynamic background color
+          backgroundColor={backgroundColor} 
           color={textColor} // Dynamic text color
           minHeight="100vh"
           transition="background-color 0.3s ease" // Smooth theme transition
@@ -27,7 +27,7 @@ function App() {
             <Header />
             <LandingSection />
             <ProjectsSection />
-            <Certificates /> {/* Certificates Component */}
+            <Certificates /> 
             <ContactMeSection />
             <Footer />
             <Alert />
