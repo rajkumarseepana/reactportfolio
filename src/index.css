@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.bg-primary {
+  background-color: #2a4365 !important;
+}
+
+.card-bg {
+  background-color: #2D3748;
+  border: 2px solid #2c5282;
+  border-radius: 10px;
+}

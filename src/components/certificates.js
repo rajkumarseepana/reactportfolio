@@ -43,7 +43,7 @@ const Certificates = () => {
         borderRadius="lg"
         boxShadow="lg"
       >
-        <Text fontSize="3xl" mb="4" fontWeight="bold" color={textColor}>
+        <Text fontSize="3xl" mb="4" fontWeight="bold" color={textColor} className="border-bottom">
           My Certificates
         </Text>
         {certificatesData.map((cert) => (
