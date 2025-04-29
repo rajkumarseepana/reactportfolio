@@ -5,9 +5,10 @@ import LandingSection from "./components/LandingSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
 import Footer from "./components/Footer";
-import Certificates from "./components/certificates"; 
+import Certificates from "./components/Certificates.js"; 
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
+import Experience from "./components/Experience";
 
 function App() {
   // Dynamically set background and text color based on theme
@@ -26,6 +27,7 @@ function App() {
           <main>
             <Header />
             <LandingSection />
+            <Experience />
             <ProjectsSection />
             <Certificates /> 
             <ContactMeSection />

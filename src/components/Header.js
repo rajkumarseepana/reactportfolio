@@ -13,6 +13,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import logo from "../images/logo1.png";
 import "./cssfiles/header.css";
+import { Moon, Sun } from "lucide-react";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -81,6 +82,13 @@ const Header = () => {
         {!isMobile && (
           <HStack className="desktop-nav">
             <Link
+              href="#experience-section"
+              onClick={handleClick("experience")}
+              style={{ color: linkColor }}
+            >
+              Experience
+            </Link>
+            <Link
               href="#projects-section"
               onClick={handleClick("projects")}
               style={{ color: linkColor }}
@@ -89,38 +97,38 @@ const Header = () => {
             </Link>
             <Link
               href="#certificates-section" // This links to the Certificates section
-              onClick={handleClick("certificates-section")}
+              onClick={handleClick("certificates")}
               style={{ color: linkColor }}
             >
               Certificates
             </Link>
             <Link
-              href="#contactmesection"
-              onClick={handleClick("contactmesection")}
+              href="#contactme-section"
+              onClick={handleClick("contactme")}
               style={{ color: linkColor }}
             >
               Contact Me
             </Link>
-            <Button
+            <IconButton
               size="sm"
               onClick={toggleColorMode}
-              className="theme-toggle"
-            >
-              {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
-            </Button>
+              icon={colorMode === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              aria-label="Toggle theme"
+              variant="ghost"
+            />
           </HStack>
         )}
 
         {/* Mobile Menu Toggle */}
         {isMobile && (
           <HStack justifyContent="flex-end" width="100%">
-            <Button
-              size="xs"
+            <IconButton
+              size="sm"
               onClick={toggleColorMode}
-              className="theme-toggle"
-            >
-              {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
-            </Button>
+              icon={colorMode === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              aria-label="Toggle theme"
+              variant="ghost"
+            />
 
             <IconButton
               icon={showMenu ? <CloseIcon /> : <HamburgerIcon />}
@@ -136,6 +144,13 @@ const Header = () => {
         {isMobile && showMenu && (
           <VStack className="mobile-menu">
             <Link
+              href="#experience-section"
+              onClick={handleClick("experience")}
+              style={{ color: linkColor }}
+            >
+              Experience
+            </Link>
+            <Link
               href="#projects-section"
               onClick={handleClick("projects")}
               style={{ color: linkColor }}
@@ -144,14 +159,14 @@ const Header = () => {
             </Link>
             <Link
               href="#certificates-section" // This links to the Certificates section
-              onClick={handleClick("Certificates")}
+              onClick={handleClick("certificates")}
               style={{ color: linkColor }}
             >
               Certificates
             </Link>
             <Link
-              href="#contactmesection"
-              onClick={handleClick("contactmesection")}
+              href="#contactme-section"
+              onClick={handleClick("contactme")}
               style={{ color: linkColor }}
             >
               Contact Me

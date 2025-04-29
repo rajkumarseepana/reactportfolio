@@ -65,7 +65,7 @@ const ContactMeSection = () => {
       backgroundColor="#2a4365"
       py={16}
       spacing={8}
-      id="contactmesection"
+      id="contactme-section"
     >
       <div className={`contact-us-wrapper ${colorMode}`}>
         <div className="contact-us-left">
